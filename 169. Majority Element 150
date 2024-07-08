@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& v) {
+        int ct=0;
+	    int element=-1;
+	    for(int i=0;i<v.size();i++){
+		    if(ct==0) element=v[i];
+		    if(v[i]==element) ct++;
+		    else ct--;
+	   }
+	     return element;
+    }
+};
